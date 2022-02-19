@@ -4,7 +4,7 @@ import DrumKeyboard from './components/DrumKeyboard';
 
 function App() {
   return (
-    <div id='drum-machine' className='btn btn-primary'>
+    <div id='drum-machine' className='container'>
       <Display />
       <DrumKeyboard />
     </div>
