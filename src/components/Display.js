@@ -1,6 +1,10 @@
 function Display(props) {
 
-    return null;
+    return (
+        <div>
+            {props.clipName}
+        </div>
+    );
 }
 
 export default Display;
