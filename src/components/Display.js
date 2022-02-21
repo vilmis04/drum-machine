@@ -23,7 +23,7 @@ function Display(props) {
     }
 
     return (
-        <div style={containerStyle}>
+        <div id='display' style={containerStyle}>
             <div style={displayStyle}>
                 {props.clipName}
             </div>

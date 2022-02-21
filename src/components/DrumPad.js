@@ -67,8 +67,8 @@ function DrumPad(props) {
 
     
     return (
-        <button id={props.id} onClick={handleClick} onKeyPress={(e)=>handleKeyPress(e)} style={buttonStyles}>
-            <audio id={props.keyboardKey} src={soundSrc[props.keyboardKey]['url']}>
+        <button className="drum-pad" id={props.id} onClick={handleClick} onKeyPress={(e)=>handleKeyPress(e)} style={buttonStyles}>
+            <audio className="clip" id={props.keyboardKey} src={soundSrc[props.keyboardKey]['url']}>
             </audio>
             {props.keyboardKey}
         </button>);
