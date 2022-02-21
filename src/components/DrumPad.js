@@ -48,15 +48,26 @@ function DrumPad(props) {
         fontWeight: 'bold'
     }
 
-    function handleClick() {
-        const audio = document.querySelector(`#${props.keyboardKey}`);
+    function handleEvent(key) {
+        const audio = document.querySelector(`#${key}`);
         audio.play();
-        props.handleClick(soundSrc[props.keyboardKey]['name']);
+        props.handleClick(soundSrc[key]['name']);
+    }
+
+    function handleClick() {
+        handleEvent(props.keyboardKey);
+    }
+
+    function handleKeyPress(event) {
+        const pressedKey = event.key.toUpperCase();
+        if (pressedKey in soundSrc) {
+            handleEvent(pressedKey);
+        }
     }
 
     
     return (
-        <button id={props.id} onClick={handleClick} style={buttonStyles}>
+        <button id={props.id} onClick={handleClick} onKeyPress={(e)=>handleKeyPress(e)} style={buttonStyles}>
             <audio id={props.keyboardKey} src={soundSrc[props.keyboardKey]['url']}>
             </audio>
             {props.keyboardKey}
