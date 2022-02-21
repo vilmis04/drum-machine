@@ -6,20 +6,21 @@ function DrumKeyboard(props) {
         display: 'grid',
         gridTemplateColumns: 'repeat(3, 1fr)',
         gap: '1rem',
-        padding: '0.5rem'
+        padding: '0.5rem',
+        width: 500
     }
 
     return (
         <div style={styles}>
-                <DrumPad id='heater-1' keyboardKey='Q'/>
-                <DrumPad id='heater-2' keyboardKey='W'/>
-                <DrumPad id='heater-3' keyboardKey='E'/>
-                <DrumPad id='heater-4' keyboardKey='A'/>
-                <DrumPad id='clap' keyboardKey='S'/>
-                <DrumPad id='open-HH' keyboardKey='D'/>
-                <DrumPad id='kick-n-hat' keyboardKey='Z'/>
-                <DrumPad id='kick' keyboardKey='X'/>
-                <DrumPad id='closed-HH' keyboardKey='C'/>
+                <DrumPad id='heater-1' keyboardKey='Q' handleClick={props.handleClick}/>
+                <DrumPad id='heater-2' keyboardKey='W' handleClick={props.handleClick}/>
+                <DrumPad id='heater-3' keyboardKey='E' handleClick={props.handleClick}/>
+                <DrumPad id='heater-4' keyboardKey='A' handleClick={props.handleClick}/>
+                <DrumPad id='clap' keyboardKey='S' handleClick={props.handleClick}/>
+                <DrumPad id='open-HH' keyboardKey='D' handleClick={props.handleClick}/>
+                <DrumPad id='kick-n-hat' keyboardKey='Z' handleClick={props.handleClick}/>
+                <DrumPad id='kick' keyboardKey='X' handleClick={props.handleClick}/>
+                <DrumPad id='closed-HH' keyboardKey='C' handleClick={props.handleClick}/>
         </div>
     );
 }
